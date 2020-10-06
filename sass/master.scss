@@ -1,7 +1,9 @@
 @import 'modules/_mediaqueries.scss';
-// mixins go here
-@import 'modules/mixins';
 @import 'modules/_vars.scss';
+// mixins go here
+@import 'modules/_mixins.scss';
+
+// main rules go here
 @import 'modules/_main.scss';
 @import 'modules/_nav.scss';
 
