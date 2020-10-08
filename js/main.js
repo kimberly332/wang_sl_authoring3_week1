@@ -12,9 +12,13 @@ import Team from "./modules/DataModule.js";
     function handleDataSet(data) {
         let currentUser = userTemplate.cloneNode(true),
             currentUserText = currentUser.querySelector(".user").children;
+    }
 
-        // userSection[1].textContent = Team["Justin"].name;
-        // userSection[2].textContent = Team["Justin"].role;
-        // userSection[3].textContent = Team["Justin"].nickname;
+    for (let user in Team) {
+        currentUserText[1].textContent = Team[user].name;
+        currentUserText[2].textContent = Team[user].role;
+        currentUserText[3].textContent = Team[user].nickname;
+
+        userSection.appendChild(currentUser);
     }
 })();
