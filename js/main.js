@@ -3,9 +3,8 @@ import Team from "./modules/DataModule.js";
 
 (() => {
     // stub * just a place for non-component-specific stuff
-    console.log('loaded');
-
-    console.log(Team);
+    let userSection = document.querySelector(".user-section"),
+        userTemplate = document.querySelector("#profs-template").content; // grab the content inside the template
 
     debugger;
 
