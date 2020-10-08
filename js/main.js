@@ -10,15 +10,21 @@ import Team from "./modules/DataModule.js";
 
     // select our user elements and load the content
     function handleDataSet(data) {
-        let currentUser = userTemplate.cloneNode(true),
-            currentUserText = currentUser.querySelector(".user").children;
+        for (let user in data) {
+           
+            // make a copy of your template here and then
+            // populate the children (text elements) with
+            // the static data from the Team object    
+            let currentUser = userTemplate.cloneNode(true),
+                currentUserText = currentUser.querySelector(".user").children;
+
+             currentUserText[1].textContent = data[user].name;
+             currentUserText[2].textContent = data[user].role;
+             currentUserText[3].textContent = data[user].nickname;
+        
+             userSection.appendChild(currentUser);
+         }
     }
 
-    for (let user in Team) {
-        currentUserText[1].textContent = Team[user].name;
-        currentUserText[2].textContent = Team[user].role;
-        currentUserText[3].textContent = Team[user].nickname;
-
-        userSection.appendChild(currentUser);
-    }
+    handleDataSet(Team);
 })();
