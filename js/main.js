@@ -22,7 +22,7 @@ import Team from "./modules/DataModule.js";
             // check status here and proceed
             if (myReq.status === 200) {
                 // 200 means done and dusted, ready to go with the dataset!
-                handleDataSet(myReq.responseText);
+                handleDataSet(JSON.parse(myReq.responseText));
 
             } else {
                 // probably got some kind of error code, so handle that 
@@ -63,5 +63,5 @@ import Team from "./modules/DataModule.js";
          }
     }
 
-    handleDataSet(Team);
+    // handleDataSet(Team);
 })();
