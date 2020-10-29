@@ -11,7 +11,7 @@ async function fetchData(datasource) {
     // if we get success, then we can return back our resource after parse it into plain JS
     let dataset = await resource.json();
 
-    return dataset;
+    return dataset[0];
 }
 
 export {fetchData};

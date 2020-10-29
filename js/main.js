@@ -3,6 +3,12 @@ import {fetchData} from "./modules/DataMiner.js";
 (() => {
     // select our user elements and load the content
     function handleDataSet(data) {
+        console.log('loaded');
+
+        function popErrorBox(message) {
+            alert ("Something has gone horribly, horribly wrong");
+        }
+
         let userSection = document.querySelector('.user-section'),
             userTemplate = document.querySelector('#user-template').content;
 
@@ -24,5 +30,6 @@ import {fetchData} from "./modules/DataMiner.js";
          console.log(data);
     }
 
-    fetchData('./DataSet.json').then(data => handleDataSet(data)).catch(err => console.log(err));
+    fetchData("./includes/functions.php").then(data => handleDataSet(data)).catch(err => { console.log(err)
+        popErrorBox(err);});
 })();
