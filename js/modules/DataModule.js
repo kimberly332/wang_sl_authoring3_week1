@@ -5,16 +5,22 @@ export default {
         nickname: "I don't know"
     },
 
+    Joe: {
+        name: "Joe",
+        role: "Prof",
+        nickname: "Teddy Bear"
+    },
+
     John: {
         name: "John",
         role: "super chill prof",
         nickname: "just john"
     },
 
-    Joe: {
-        name: "Joe",
+    Jarrod: {
+        name: "Jarrod",
         role: "Prof",
-        nickname: "Teddy Bear"
+        nickname: "Supermodel"
     },
 
     Pan: {
@@ -23,9 +29,9 @@ export default {
         nickname: "Spider Pan"
     },
 
-    Jarrod: {
-        name: "Jarrod",
-        role: "Ｍale Model Prof",
-        nickname: "Zoolander"
+    Trevor: {
+        name: "Trevor",
+        role: "Prof of Dark Arts",
+        nickname: "Evil Genius"
     }
 }

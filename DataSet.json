@@ -1,6 +1,8 @@
 {
     "Justin":{"name":"Justin","role":"Coordinator","nickname":"i don't know", "avatar": "justin.jpg"},
-    "John":{"name":"John","role":"super chill prof","nickname":"just john", "avatar": "john.jpg"},
     "Joe":{"name":"Joe","role":"Prof","nickname":"Teddy Bear", "avatar": "joe.jpg"},
-    "Pan":{"name":"Pan","role":"Code Ninja","nickname":"Spider Pan", "avatar": "pan.jpg"}
+    "John":{"name":"John","role":"super chill prof","nickname":"just john", "avatar": "john.jpg"},
+    "Jarrod":{"name":"Jarrod","role":"Prof","nickname":"Supermodel", "avatar": "jarrod.jpg"},
+    "Pan":{"name":"Pan","role":"Uber Prof","nickname":"Code Ninja", "avatar": "pan.jpg"},
+    "Trevor":{"name":"Trevor","role":"Prof of Dark Arts","nickname":"Evil Genius", "avatar": "trevor.jpg"}
 }
