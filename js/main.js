@@ -9,28 +9,20 @@ import {fetchData} from "./modules/DataMiner.js";
     }
 
     function handleDataSet(data) {
-        let userSection = document.querySelector('.user-section'),
-            userTemplate = document.querySelector('#user-template').content;
-
-        for (let user in data) {
-            let currentUser = userTemplate.cloneNode(true),
-                currentUserText = currentUser.querySelector('.user').children;
-
-            currentUserText[1].src = `images/${data[user].avatar}`;
-            currentUserText[2].textContent = data[user].name;
-            currentUserText[3].textContent = data[user].role;
-            currentUserText[4].textContent = data[user].nickname;
-
-            // add this new user to the view
-            userSection.appendChild(currentUser);
-        }
+        // populate a lightbox with this data
+        // and then open it
+        let lightbox = document.querySelector(".lightbox");
     }
 
-    function retrieveProjectInfo () {
+    function retrieveProjectInfo (event) {
         // test for an ID
-        console.log(this.id);
+        // check for an id, and if there isn't one, then don't try the fetch call
+        // because it'll break (the PHP will choke)
+        if (!event.target.id) {
+            return
+        }
 
-        fetchData(`./includes/index.php?id=${this.id}`).then(data => console.log(data)).catch(err => console.log(err));
+        fetchData(`./includes/index.php?id=${event.target.id}`).then(data => console.log(data)).catch(err => console.log(err));
     }
 
     function renderPortfolioThumbnails(thumbs) {
@@ -44,9 +36,10 @@ import {fetchData} from "./modules/DataMiner.js";
              currentUserText[1].src = `images/${thumbs[user].avatar}`;
              currentUserText[1].id = thumbs[user].id;
             // add this new user to the view
-             currentUser.addEventListener("click", retrieveProjectInfo);
              userSection.appendChild(currentUser);
          }
+
+         userSection.addEventListener("click", retrieveProjectInfo);
     }
 
     fetchData("./includes/index.php").then(data => renderPortfolioThumbnails(data)).catch(err => console.log(err));
